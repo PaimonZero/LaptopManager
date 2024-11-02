@@ -1,10 +1,10 @@
 
-import AboutPage from './pages/about/AboutPage';
-
+import { RouterProvider } from 'react-router-dom';
+import { router } from './router/Router';
 const App = () => {
 	return (
 		<>
-			<AboutPage/>
+			<RouterProvider router={router} />
 		</>
 	);
 };
