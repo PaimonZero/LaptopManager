@@ -99,24 +99,31 @@
     },
     {
       "id": "2",
-      "name": "Đinh Quốc Chương",
-      "username": "QE170097",
+      "name": "Phạm Lê Hoàng Nam",
+      "username": "namadmin123",
       "password": "123456",
-      "username_github": "bakaqc"
+      "username_github": "PaimonZero"
     },
     {
       "id": "3",
-      "name": "Nguyễn Thị Thúy",
-      "username": "QE170033",
+      "name": "Lê Văn Thiện",
+      "username": "thienadmin123",
       "password": "123456",
-      "username_github": "yuhtnguyen"
+      "username_github": "ShmilyTM"
     },
     {
       "id": "4",
-      "name": "Hồ Trọng Nghĩa",
-      "username": "QE170173",
+      "name": "Phạm Lê Minh Quân",
+      "username": "quanadmin",
       "password": "123456",
-      "username_github": "htnghia1423"
-    }
+      "username_github": "nauQ9029"
+    },
+    {
+      "id": "5",
+      "name": "Nguyễn Văn Thương",
+      "username": "thuongadmin",
+      "password": "123456",
+      "username_github": "QE180086"
+    },
   ]
 }
