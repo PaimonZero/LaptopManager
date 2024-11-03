@@ -4,6 +4,7 @@ import LoadingComponent from '../components/common/LoadingComponent';
 import Error404 from '../pages/error/Error404';
 
 import { Provider } from 'react-redux';
+const LoginPage = lazy(() => import('../pages/login/LoginPage'));
 const AboutPage = lazy(() => import('../pages/about/AboutPage'));
 const HomePage = lazy(() => import('../pages/home/HomePage'));
 const ProductDetailPage = lazy(
@@ -27,6 +28,14 @@ export const router = createBrowserRouter([
 			</Suspense>
 		),
 	},
+	{
+        path: '/hextech/login',
+        element: (
+            <Suspense fallback={<LoadingComponent />}>
+                <LoginPage />
+            </Suspense>
+        ),
+    },
 	{
 		path: '/hextech/about',
 		element: (
