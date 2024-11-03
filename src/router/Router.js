@@ -3,11 +3,6 @@ import { createBrowserRouter } from 'react-router-dom';
 import LoadingComponent from '../components/common/LoadingComponent';
 import Error404 from '../pages/error/Error404';
 
-
-const HomePage = lazy(() => import('../pages/home/HomePage'));
-
-const AboutPage = lazy(() => import('../pages/about/AboutPage'));
-
 export const router = createBrowserRouter([
 	{
 		path: '/',
@@ -17,7 +12,7 @@ export const router = createBrowserRouter([
 			</Suspense>
 		),
 	},
-
+                                          
 	{
 		path: '/hextech/about',
 		element: (
