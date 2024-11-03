@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import LoadingComponent from '../components/common/LoadingComponent';
 import Error404 from '../pages/error/Error404';
 const ProductListPage = lazy(() => import('../pages/products/ProductListPage'));
+const AddProductPage = lazy(() => import('../pages/products/AddProductPage'));
 
 
 const HomePage = lazy(() => import('../pages/home/HomePage'));
