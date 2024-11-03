@@ -2,8 +2,17 @@ import { Suspense, lazy } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import LoadingComponent from '../components/common/LoadingComponent';
 import Error404 from '../pages/error/Error404';
+
+import { Provider } from 'react-redux';
+
+const HomePage = lazy(() => import('../pages/home/HomePage'));
+const ProductDetailPage = lazy(
+	() => import('../pages/products/ProductDetailPage'),
+);
+
 const ProductListPage = lazy(() => import('../pages/products/ProductListPage'));
 const AddProductPage = lazy(() => import('../pages/products/AddProductPage'));
+
 
 export const router = createBrowserRouter([
 	{
@@ -14,6 +23,7 @@ export const router = createBrowserRouter([
 			</Suspense>
 		),
 	},
+
 	{
 		path: '/hextech/products',
 		element: (
@@ -30,11 +40,12 @@ export const router = createBrowserRouter([
 			</Suspense>
 		),
 	},
+
 	{
-		path: '/hextech/about',
+		path: '/hextech/detail-product/:id',
 		element: (
 			<Suspense fallback={<LoadingComponent />}>
-				<AboutPage />
+				<ProductDetailPage />
 			</Suspense>
 		),
 	},
