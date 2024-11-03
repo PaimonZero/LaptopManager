@@ -2,6 +2,7 @@ import { Suspense, lazy } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import LoadingComponent from '../components/common/LoadingComponent';
 import Error404 from '../pages/error/Error404';
+const ProductListPage = lazy(() => import('../pages/products/ProductListPage'));
 
 
 const HomePage = lazy(() => import('../pages/home/HomePage'));
@@ -17,7 +18,22 @@ export const router = createBrowserRouter([
 			</Suspense>
 		),
 	},
-
+	{
+		path: '/hextech/products',
+		element: (
+			<Suspense fallback={<LoadingComponent />}>
+				<ProductListPage />
+			</Suspense>
+		),
+	},
+	{
+		path: '/hextech/add-product',
+		element: (
+			<Suspense fallback={<LoadingComponent />}>
+				<AddProductPage />
+			</Suspense>
+		),
+	},
 	{
 		path: '/hextech/about',
 		element: (
